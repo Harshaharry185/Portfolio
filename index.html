@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="Stylesheet" href="Style.css">
+</head>
+<body>
+    <div id="header">
+     <div class="container">
+      <nav>
+         <img src="Images/Hv logo.png" class="logo" >
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+      </nav>
+      <div class="header-text">
+        <p> MCA Student</p>
+        <h1>Hi, i'm <span>Harshavardhan</span> <br>from puttur</h1>
+      </div>
+     </div>
+      
+    </div>
+
+
+<!----------------about----------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/harsh.jpg">
+                </div>
+                <div class="about-col-2">
+                  <h1 class="sub-title">About Me</h1>
+                  <p> I have completed my Master's Of Computer Applications(MCA) from SIDDHARTHA INSTITUTION OF ENGINEERING & TECHNOLOGY,puttur.
+                     i have completed my graduation from Seshachala Degree college,puttur.i am self motivated and disciplined person.Looking for an opportunity in a 
+                     reputed company to grow my career as well as giving my best to the company growth..
+                </p>
+
+
+                <div class="tab-titles">
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Projects')">Projects</p>
+                    
+                </div>
+                <div class="tab-contents active-tab"id="skills">
+                    <ul>
+                        <li><span>Core java</span> </li>
+                        <li><span>S-Q-L</span> </li>
+                        <li><span>Microsoft Excel</span> </li>
+                    </ul>
+                </div>
+                <div class="tab-contents"id="Projects">
+                    <li>portfolio website using Html,Css and javascript</li>
+                    <li>Login form using Html and Css</li>
+                    <li>CountdownTimer using Html, Css and javascript</li>
+                </div>
+                <div class="tab-contents"id="experience">
+                    <ul>
+                        <li>I'm a fresher,looking for an opportunity in a reputed company to grow my skills as well as help the organization too. </li>
+                       
+                    </ul>
+                </div>
+                <div class="tab-contents"id="education">
+                    <ul>
+                        <li><span><u>2022-2024</u><br>MCA</span><br>SIDDHARTHA INSTITUTION OF ENGINEERING & TECHNOLOGY,Puttur.</li>
+                        <li><span><u>2018-2021</u><br>B.Sc(MPCS) <br></span>SESHA CHALA DEGREE COLLEGE,Puttur.</li>
+                        <li><span><u>2014-2016</u><br>MPC<br></span>SRI SAI JYOTHI JR COLLEGE,Tirupati.</li>
+                        <li><span><u>2013-2014</u><br>SSC</span><br>SESHASAI HIGH School,Puttur.</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-titile">Contact Me</h1>
+                    <p>harshaharry185@gmail.com</p>
+                    <p>+91 9618084912</p>
+                    <!-- Add icon library -->
+                       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                       
+                       <!-- Add font awesome icons -->
+                       <a href="#" class="fa fa-facebook"></a>
+                       <a href="#" class="fa fa-twitter"></a>
+                       <a href="#" class="fa fa-linkedin"></a>
+                       <a href="#" class="fa fa-instagram"></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!----------javaScript------------>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
